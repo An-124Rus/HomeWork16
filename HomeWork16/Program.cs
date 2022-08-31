@@ -5,22 +5,19 @@
         int minRandomNumber = 1;
         int maxRandomNumber = 28;
         int minValue = 100;
-        int maxValue = 999;
-        int value = 0;
+        int maxValue = 999;        
         int count = 0;
 
         Random multiplisity = new Random();
         int number = multiplisity.Next(minRandomNumber, maxRandomNumber);
         Console.WriteLine(number);
 
-        for(int i = 1; i <= maxValue; i++)
+        for(int i = 0; i <= maxValue; i += number)
         {
-            value += number;
-
-            if (value >= minValue && value <= maxValue)
+            if (i >= minValue)
             {
-                Console.WriteLine($"{count}. {value}");
                 count++;
+                Console.WriteLine($"{count}. {i}");
             }            
         }
 
